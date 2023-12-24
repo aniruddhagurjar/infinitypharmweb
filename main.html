@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+
+  <link rel="icon" type="image/x-icon" href="logo011.png">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <title> Infinity Pharma </title>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-menu icon'></i>
+        <div class="logo_name">Infinity</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="main.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      
+     <li>
+       <a href="product.html">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Products</span>
+       </a>
+       <span class="tooltip">Products</span>
+     </li>
+     
+     
+     <li>
+       <a href="contact.html">
+         <i class="glyphicon glyphicon-user"></i>
+         <span class="links_name">Contact Us</span>
+       </a>
+       <span class="tooltip">Contact Us</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="logonew.png" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Infinity Pharma</div>
+             <div class="job">Copyright @ 2022</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Home</div>
+<br>
+<br>
+
+      <section class="left-sec">
+   <h2> We Are Here For Your Care</h2>
+   <h1>  Infinity Pharma</h1>
+   <p>Your 24x7 Home Pharmacy</p>
+  </section>
+<br>
+<br>
+<br>
+  <div class="sec" id="sec">
+    <h2><b>About Us:</b></h2>
+    <br>
+    <br>
+    <p>~ If you are planning on entering India, our expertise and long-standing network can help you. Infinity pharma has extensive OTC and pharma know how and we would be excited to help you to take advantage of the golden opportunities in India!
+<br><br>
+~ Infinity Pharma Is a Young dynamic organization whose endeavor is to give easy access to organizations with good quality pharmaceutical products, Nutrition supplements, medical equipment and supplies in India.
+<br><br>
+~ Infinity pharma has a well knitted channel partners who are strong and have ability to distribute our products through Hospital, Pharmacy and OTC channel across Mumbai and upcountry.
+<br><br>
+~ Infinity pharma aims to provide highest quality products with excellent packing at an affordable price, so that we touch upon lives of people by giving them a good experience.</p>
+  </div>
+
+
+<div class="sec2" id="sec2">
+
+    <h2><b> Why Infinity Pharma? </b></h2>
+    <br>
+    <br>
+    <img src="mumbai.png"> <h4> based in ~Mumbai </h4>
+    <br>
+    <br>
+    <p> Infinity Pharma Is a Young dynamic organization whose endeavor is to give easy access to organizations with good quality pharmaceutical products, Nutrition supplements, medical equipment and supplies in India.<br>
+    Infinity Pharma has the largest supply chain of Drugs/Medicines in India.
+    </p>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+<div class="footer-basic">
+        <footer>
+            <div class="social">
+              <a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
+              <a href="https://www.snapchat.com/"><i class="icon ion-social-snapchat"></i></a>
+              <a href="https://www.twitter.com/"><i class="icon ion-social-twitter"></i></a>
+              <a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="product.html">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Infinity Pharmaceuticals © 2023</p>
+        </footer>
+    </div>
+    
+  
+
+
+
+
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
